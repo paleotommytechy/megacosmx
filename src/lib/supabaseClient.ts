@@ -12,7 +12,7 @@ let client = null as ReturnType<typeof createClient<Database>> | null;
 
 try {
 	if (typeof supabaseUrl === 'string' && supabaseUrl.startsWith('http')) {
-		client = createClient<Database>(supabaseUrl, supabaseAnonKey || '');
+		client = createClient<Database>(supabaseUrl, supabaseAnonKey || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBxcm1sb3Z2a21saWRxYXhmZ2dqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjcxNTczNzAsImV4cCI6MjA4MjczMzM3MH0.-aX2Cp2yFU3dhN0WgvAklCtLdvg8bMIq99wOJIdWRBI');
 	} else {
 		console.warn('Supabase URL not provided or invalid; running without Supabase client.');
 	}
