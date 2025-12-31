@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Zap, ShieldCheck } from 'lucide-react';
+import { ShieldCheck } from 'lucide-react';
 
 export const Navbar: React.FC = () => {
   const location = useLocation();
@@ -10,9 +10,11 @@ export const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center gap-2 group">
-            <div className="relative flex items-center justify-center w-8 h-8 rounded-lg bg-gradient-to-tr from-cosmic-blue to-cosmic-cyan text-white shadow-lg group-hover:shadow-cosmic-cyan/50 transition-all">
-              <Zap size={20} fill="currentColor" />
-            </div>
+            <img 
+              src="/logo.png" 
+              alt="MegacosmX Logo" 
+              className="w-8 rounded-full h-8 object-contain group-hover:opacity-80 bg-white transition-opacity"
+            />
             <span className="text-xl font-bold text-white tracking-wide">
               Megacosm<span className="text-cosmic-cyan">X</span>
             </span>
