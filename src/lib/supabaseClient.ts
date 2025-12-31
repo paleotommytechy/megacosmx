@@ -5,8 +5,8 @@ import { Database } from '../types/database.types';
 // but for this prototype structure, we assume they are injected via Vite's import.meta.env
 
 const env = (import.meta as any).env || {};
-const supabaseUrl = env.VITE_SUPABASE_URL;
-const supabaseAnonKey = env.VITE_SUPABASE_ANON_KEY;
+const supabaseUrl = env.VITE_SUPABASE_URL || "https://pqrmlovvkmlidqaxfggj.supabase.co";
+const supabaseAnonKey = env.VITE_SUPABASE_ANON_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBxcm1sb3Z2a21saWRxYXhmZ2dqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjcxNTczNzAsImV4cCI6MjA4MjczMzM3MH0.-aX2Cp2yFU3dhN0WgvAklCtLdvg8bMIq99wOJIdWRBI";
 
 let client = null as ReturnType<typeof createClient<Database>> | null;
 
